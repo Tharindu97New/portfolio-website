@@ -40,10 +40,10 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className='flex space-x-6 border-b mb-5 px-5 h-14 items-center'>
-      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-        <Link href="/"><div className='text-2xl font-bold'>Tharindu Kavishna</div></Link>
-        <ul className={`md:flex md:items-center md:space-x-8  ${isOpen ? 'block' : 'hidden'}`}>
+    <nav className='flex space-x-6 border-b  h-14 items-center bg-red-400'>
+      <div className="container mx-auto px-4 py-2 flex justify-between items-center bg-red-700">
+      {!isOpen && <Link href="/"><div className='text-2xl font-bold'>Tharindu Kavishna</div></Link>} 
+        <ul className={`md:flex items-start md:space-x-8 ${isOpen ? 'block' : 'hidden'}`}>
           {links.map(link => 
             <div key={link.href}>
                 <Link 
